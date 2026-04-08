@@ -1,0 +1,462 @@
+/* style.css - Styles pour la page d'accueil de la banque en ligne que j'ai pris  */
+:root {
+    --orange: #FF6B35;           /* Couleur principale orange */
+    --orange-fonce: #E55A2A;     /* Orange plus foncé pour les survols */
+    --gris-fonce: #1A1A1A;       /* Pour les titres */
+    --gris-moyen: #666666;       /* Pour les textes */
+    --gris-fond: #E8EAE9;        /* Fond de la page */
+    
+    
+    
+    --police-principale: 'Inter', Arial, sans-serif;
+    --police-titre: 'Inter', Arial, sans-serif;
+    
+    /* Ombres pour l'effet neumorphique */
+    --ombre-legere: 
+        -4px -4px 8px 0px rgba(255, 255, 255, 1),
+        3px 3px 6px 0px rgba(13, 39, 80, 0.04);
+    --ombre-appuyee: 
+        -4px -4px 8px 0px rgba(255, 255, 255, 1),
+        3px 3px 6px 0px rgba(13, 39, 80, 0.04),
+        inset -3px -3px 5px 0px rgba(255, 255, 255, 0.4),
+        inset 3px 3px 5px 0px rgba(13, 39, 80, 0.05);
+}
+
+
+* {/* Réinitialisation de base */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--police-principale);
+    background-color: var(--gris-fond);
+    color: grey;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.entete {
+    background-color: var(--gris-fond);
+    padding: 8px 20px;
+    border-radius: 50px;
+    box-shadow: var(--ombre-legere);
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.entete-interieur {/*  aligner les éléments */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.logo a {/* nom banque */
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--orange);
+    text-decoration: none;
+}
+
+
+.menu ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color:black;
+    font-size: 13px;
+    padding: 5px 8px;
+    border-radius: 30px;
+    transition: all 0.2s;
+}
+
+
+.menu a:hover { /* survol des differents liens */
+    color: var(--orange);
+    box-shadow: var(--ombre-appuyee);
+}
+
+
+.boutons-droite {/* les boutons à droite  */
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+
+.btn-inscription {
+    background-color: var(--orange);
+    color: white;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.btn-inscription:hover {
+    background-color: var(--orange-fonce);
+    transform: scale(1.02);
+}
+
+
+.btn-connexion {
+    color: var(--orange);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: var(--gris-fond);
+    box-shadow: var(--ombre-legere);
+    transition: all 0.2s;
+}
+
+.btn-connexion:hover { /* effet d'appui changement */
+    box-shadow: var(--ombre-appuyee);
+}
+
+
+.btn-langue {
+    color:black;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 40px;
+    font-size: 12px;
+    background-color: var(--gris-fond);
+    box-shadow: var(--ombre-legere);
+    transition: all 0.2s;
+}
+
+.btn-langue:hover {
+    box-shadow: var(--ombre-appuyee); /* effet d'appui */
+    color: var(--orange);
+}
+
+
+.contenu-principal {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.bloc-principal {/* grande case  */
+    text-align: center;
+    padding: 35px 15px;
+    background-color: var(--gris-fond);
+    border-radius: 40px;
+    box-shadow: var(--ombre-legere);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.texte-principal {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.titre-principal {
+    font-size: 36px;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 12px;
+    line-height: 1.2;
+    font-family: var(--police-titre);
+}
+
+
+.description {
+    font-size: 14px;
+    color: var(--gris-moyen);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+.btn-telecharger {
+    display: inline-block;
+    background-color: var(--orange);
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.2s;
+    box-shadow: var(--ombre-legere);
+    margin-bottom: 15px;
+}
+
+.btn-telecharger:hover {
+    background-color: var(--orange-fonce);
+    transform: scale(1.02);
+    box-shadow: var(--ombre-appuyee);
+}
+
+
+.offre {
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--orange);
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-top: 15px;
+    font-size: 14px;
+    transition: all 0.2s;/* effet d'appui */
+}
+
+.offre:hover {
+   
+
+    background-color: var(--orange-fonce);
+    transform: scale(1.02);/* effet d'appui */
+    box-shadow: var(--ombre-appuyee);
+}
+
+
+
+.pied-page {/* grande case grise */
+    background-color: var(--gris-fond);
+    padding: 20px 25px 15px;
+    border-radius: 40px;
+    box-shadow: var(--ombre-legere);
+    width: 80%;
+    max-width: 900px;
+}
+
+.pied-interieur {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 15px;
+}
+
+
+.pied-nom span {/* nom banque*/
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.pied-nom p {
+    font-size: 11px;
+    color: grey;
+}
+
+
+.pied-liens {/* les 4 colonnes de liens */
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+/* Style pour les titres des colonnes (Découvrir, Compte, Ressources) */
+.colonne-liens h2,
+.colonne-liens h3,
+.colonne-liens h4,
+.titre-colonne {
+    font-size: 11px;        /* Plus petit */
+    font-weight: bold;      /* En gras */
+    color: black;           /* Noir */
+    margin-bottom: 8px;
+}
+
+.colonne-liens a {/* les liens des colonnes */
+    display: block;
+    text-decoration: none;
+    color: var(--gris-moyen);
+    margin-bottom: 5px;
+    font-size: 11px;
+    transition: color 0.2s;
+}
+
+.colonne-liens a:hover {
+    color: var(--orange);
+}
+
+/* Icônes des réseaux sociaux */
+.pied-reseaux {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    margin-bottom: 15px;
+}
+
+.icone-reseau {
+    text-decoration: none;
+    color: var(--gris-moyen);
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 30px;
+    transition: all 0.2s;
+    background-color: var(--gris-fond);
+    box-shadow: var(--ombre-legere);
+}
+
+.icone-reseau:hover {
+    color: var(--orange);
+    box-shadow: var(--ombre-appuyee);
+    transform: scale(1.05);
+}
+
+
+.pied-copyright {
+    text-align: center;
+    padding-top: 12px;
+    font-size: 10px;
+    color: var(--gris-moyen);
+}
+
+@media (max-width: 700px) {/*  tablettes ou téléphones */
+    body {
+        padding: 12px;
+    }
+    
+    .entete {
+        width: 95%;
+        padding: 8px 15px;
+    }
+    
+    .pied-page {
+        width: 95%;
+        padding: 15px 18px 12px;
+    }
+    
+    .entete-interieur {
+        flex-direction: column;
+    }
+    
+    .menu ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .menu a {
+        font-size: 11px;
+    }
+    
+    .bloc-principal {
+        padding: 25px 12px;
+        max-width: 95%;
+    }
+    
+    .titre-principal {
+        font-size: 26px;
+    }
+    
+    .description {
+        font-size: 12px;
+    }
+    
+    .btn-telecharger {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+    
+    .offre {
+        font-size: 11px;
+    }
+    
+    .pied-interieur {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .pied-liens {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    /* Style mobile pour les titres */
+    .colonne-liens h2,
+    .colonne-liens h3,
+    .colonne-liens h4,
+    .titre-colonne {
+        font-size: 10px;
+    }
+    
+    .pied-reseaux {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .icone-reseau {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+}
+
+
+@media (max-width: 480px) {/* petits téléphones */
+    .logo a {
+        font-size: 14px;
+    }
+    
+    .menu a {
+        font-size: 9px;
+        padding: 4px 6px;
+    }
+    
+    .btn-inscription,
+    .btn-connexion,
+    .btn-langue {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+    
+    .titre-principal {
+        font-size: 22px;
+    }
+    
+    .description {
+        font-size: 11px;
+    }
+    
+    .offre {
+        font-size: 10px;
+    }
+    
+    .pied-nom span {
+        font-size: 14px;
+    }
+    
+    .icone-reseau {
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    /* Très petit mobile pour les titres */
+    .colonne-liens h2,
+    .colonne-liens h3,
+    .colonne-liens h4,
+    .titre-colonne {
+        font-size: 9px;
+    }
+}

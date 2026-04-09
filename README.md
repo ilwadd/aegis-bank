@@ -126,7 +126,9 @@ Le projet repose sur des technologies web modernes :
 * Flexbox → alignement des éléments
 * Grid → organisation du layout
 * Mobile-first → adaptation mobile
- 📁 STRUCTURE DU PROJET
+
+  
+📁 STRUCTURE DU PROJET
 
 ```
 aegis-bank/

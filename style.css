@@ -22,8 +22,8 @@
         inset 3px 3px 5px 0px rgba(13, 39, 80, 0.05);
 }
 
-/* AJOUTÉ POUR SUPPRIMER LE SCROLL HORIZONTAL */
-html, body {
+
+html, body {/* eviter le scroll horizontal */
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;

@@ -42,17 +42,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 
 .entete {
     background-color: var(--gris-fond);
-    padding: 8px 20px;
+    padding: 6px 12px;
     border-radius: 50px;
     box-shadow: var(--ombre-legere);
-    margin-bottom: 20px;
-    width: 80%;
+    margin-bottom: 15px;
+    width: 100%;
     max-width: 900px;
 }
 
@@ -61,24 +61,24 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
 }
 
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .icone-menu {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     display: block;
 }
 
 .logo a {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
     color: var(--orange);
     text-decoration: none;
@@ -87,15 +87,17 @@ body {
 
 .menu ul {
     display: flex;
-    gap: 15px;
+    gap: 8px;
     list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .menu a {
     text-decoration: none;
     color: black;
-    font-size: 13px;
-    padding: 5px 8px;
+    font-size: 10px;
+    padding: 4px 6px;
     border-radius: 30px;
     transition: all 0.2s;
 }
@@ -108,7 +110,7 @@ body {
 
 .boutons-droite {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     align-items: center;
 }
 
@@ -117,9 +119,9 @@ body {
     background-color: var(--orange);
     color: white;
     text-decoration: none;
-    padding: 6px 14px;
+    padding: 4px 10px;
     border-radius: 40px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     transition: all 0.2s;
 }
@@ -133,9 +135,9 @@ body {
 .btn-connexion {
     color: var(--orange);
     text-decoration: none;
-    padding: 6px 14px;
+    padding: 4px 10px;
     border-radius: 40px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     background-color: var(--gris-fond);
     box-shadow: var(--ombre-legere);
@@ -158,11 +160,11 @@ body {
 .bloc-principal {
     position: relative;
     text-align: center;
-    padding: 35px 15px;
+    padding: 25px 10px;
     background-color: var(--gris-fond);
     border-radius: 40px;
     box-shadow: var(--ombre-legere);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     width: 100%;
     max-width: 800px;
     display: flex;
@@ -174,18 +176,18 @@ body {
 /* POST-IT STYLE PAPIER - avec coin replié et rotation */
 .postit-offre {
     position: absolute;
-    top: -8px;
-    left: 20px;
+    top: -6px;
+    left: 5px;
     background-color: var(--orange);
     color: white;
     font-weight: bold;
-    font-size: 12px;
-    padding: 10px 18px 10px 14px;
+    font-size: 8px;
+    padding: 3px 8px 3px 6px;
     z-index: 5;
     letter-spacing: 0.5px;
     font-family: var(--police-principale);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: rotate(-3deg);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: rotate(-2deg);
     clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%);
     transition: transform 0.2s ease;
 }
@@ -207,7 +209,7 @@ body {
 }
 
 .texte-principal {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -218,10 +220,10 @@ body {
 
 
 .titre-principal {
-    font-size: 36px;
+    font-size: 22px;
     font-weight: bold;
     color: black;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     line-height: 1.2;
     font-family: var(--police-titre);
     text-align: center;
@@ -229,11 +231,12 @@ body {
 
 
 .description {
-    font-size: 14px;
+    font-size: 11px;
     color: var(--gris-moyen);
-    margin-bottom: 20px;
-    line-height: 1.5;
+    margin-bottom: 15px;
+    line-height: 1.4;
     text-align: center;
+    padding: 0 5px;
 }
 
 
@@ -242,9 +245,9 @@ body {
     background-color: var(--orange);
     color: white;
     text-decoration: none;
-    padding: 10px 24px;
+    padding: 6px 16px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: bold;
     transition: all 0.2s;
     box-shadow: var(--ombre-legere);
@@ -260,10 +263,10 @@ body {
 
 .pied-page {
     background-color: var(--gris-fond);
-    padding: 20px 25px 15px;
+    padding: 12px 15px 10px;
     border-radius: 40px;
     box-shadow: var(--ombre-legere);
-    width: 80%;
+    width: 100%;
     max-width: 900px;
 }
 
@@ -272,14 +275,14 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    padding-bottom: 15px;
+    gap: 10px;
+    padding-bottom: 10px;
 }
 
 
 .pied-liens {
     display: flex;
-    gap: 35px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -287,8 +290,8 @@ body {
     display: block;
     text-decoration: none;
     color: var(--gris-moyen);
-    margin-bottom: 5px;
-    font-size: 11px;
+    margin-bottom: 3px;
+    font-size: 9px;
     transition: color 0.2s;
 }
 
@@ -298,18 +301,18 @@ body {
 
 .pied-reseaux {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .icone-reseau {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     text-decoration: none;
     color: var(--gris-moyen);
-    font-size: 12px;
-    padding: 5px 10px;
+    font-size: 9px;
+    padding: 3px 6px;
     border-radius: 30px;
     background-color: var(--gris-fond);
     box-shadow: var(--ombre-legere);
@@ -323,8 +326,8 @@ body {
 }
 
 .svg-icon {
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg);
     transition: all 0.2s;
 }
@@ -335,129 +338,13 @@ body {
 
 .pied-copyright {
     text-align: center;
-    padding-top: 12px;
-    font-size: 10px;
+    padding-top: 8px;
+    font-size: 8px;
     color: var(--gris-moyen);
 }
 
-/* VERSION MOBILE AVEC LARGEURS RÉDUITES */
-@media (max-width: 700px) {
-    body {
-        padding: 8px;
-    }
-    
-    .entete {
-        width: 100%;
-        padding: 6px 12px;
-    }
-    
-    .pied-page {
-        width: 100%;
-        padding: 12px 15px 10px;
-    }
-    
-    .entete-interieur {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .menu ul {
-        gap: 6px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .menu a {
-        font-size: 10px;
-        padding: 4px 6px;
-    }
-    
-    .postit-offre {
-        top: -5px;
-        left: 5px;
-        padding: 4px 10px 4px 8px;
-        font-size: 9px;
-        transform: rotate(-2deg);
-    }
-    
-    .bloc-principal {
-        padding: 20px 10px;
-        width: 100%;
-    }
-    
-    .titre-principal {
-        font-size: 24px;
-    }
-    
-    .description {
-        font-size: 11px;
-    }
-    
-    .btn-telecharger {
-        padding: 6px 16px;
-        font-size: 11px;
-    }
-    
-    .pied-interieur {
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-    }
-    
-    .pied-liens {
-        justify-content: center;
-        gap: 15px;
-    }
-    
-    .pied-reseaux {
-        justify-content: center;
-    }
-    
-    .btn-inscription,
-    .btn-connexion {
-        padding: 4px 10px;
-        font-size: 10px;
-    }
-}
 
-
-@media (max-width: 480px) {
-    .logo a {
-        font-size: 13px;
-    }
-    
-    .icone-menu {
-        width: 16px;
-        height: 16px;
-    }
-    
-    .menu a {
-        font-size: 9px;
-        padding: 3px 5px;
-    }
-    
-    .postit-offre {
-        top: -4px;
-        left: 4px;
-        padding: 3px 8px 3px 6px;
-        font-size: 8px;
-    }
-    
-    .titre-principal {
-        font-size: 20px;
-    }
-    
-    .description {
-        font-size: 10px;
-    }
-    
-    .icone-reseau {
-        font-size: 9px;
-        padding: 3px 6px;
-    }
-    
-    .svg-icon {
-        width: 12px;
-        height: 12px;
-    }
+.entete, .pied-page, .bloc-principal, .menu, .menu ul, .boutons-droite {
+    overflow-x: hidden;
+    max-width: 100%;
 }

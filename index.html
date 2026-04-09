@@ -2,21 +2,26 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
     <title>Aegis Bank</title>
     <meta name="description" content="Banque éthique et transparente pour les créateurs de contenu.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Sécurité supplémentaire */
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
 </head>
 <body>
 
     <header class="entete">
         <div class="entete-interieur">
-            
             <div class="logo">
                 <img src="images/menu.svg" alt="Menu principal" class="icone-menu">
                 <a href="#">AEGIS BANK</a>
             </div>
-            
             <nav class="menu">
                 <ul>
                     <li><a href="#">Solutions streamers</a></li>
@@ -24,49 +29,34 @@
                     <li><a href="#">Écosystème Pro</a></li>
                 </ul>
             </nav>
-            
             <div class="boutons-droite">
                 <a href="#" class="btn-inscription">S'inscrire</a>
                 <a href="#" class="btn-connexion">Se connecter</a>
             </div>
-            
         </div>
     </header>
 
-    
     <main class="contenu-principal">
-        
         <section class="bloc-principal">
-            
-            <div class="postit-offre">
-                20€ offerts - Mars 2026
-            </div>
-
+            <div class="postit-offre">20€ offerts - Mars 2026</div>
             <div class="texte-principal">
-                
                 <h1 class="titre-principal">La banque éthique <br>et transparente</h1>
-              
                 <p class="description">
                     Banque de Financement et d'Investissement, Aegis Bank s'engage à offrir des services financiers responsables et transparents, en mettant l'accent sur l'éthique et la durabilité.
                 </p>
-                
                 <a href="#" class="btn-telecharger">Télécharger l'app</a>
-                
             </div>
         </section>
-        
     </main>
 
     <footer class="pied-page">
         <div class="pied-interieur">
-            
             <div class="pied-liens">
                 <div class="colonne-liens">
                     <a href="#">Mentions légales</a>
                     <a href="#">Politique de confidentialité</a>
                 </div>
             </div>
-
             <div class="pied-reseaux">
                 <a href="#" class="icone-reseau">
                     <img src="images/papillon.png" alt="Bluesky" class="svg-icon">
@@ -79,7 +69,6 @@
                 </a>
             </div>
         </div>
-        
         <div class="pied-copyright">
             <p>© 2026 Aegis Bank</p>
         </div>

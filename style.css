@@ -23,7 +23,7 @@
 }
 
 
-* {
+* { /* Réinitialisation des margesp,paddings, et utilisation du box-sizing  */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -121,7 +121,7 @@ body {
 
 .btn-inscription:hover {
     background-color: var(--orange-fonce);
-    transform: scale(1.02);
+    transform: scale(1.02); /* Légère augmentation de taille au survol */
 }
 
 
@@ -166,9 +166,8 @@ body {
     justify-content: center;
 }
 
-/* POST-IT STYLE PAPIER - avec coin replié et rotation */
-.postit-offre {
-    position: absolute;
+.postit-offre {/* Style pour le post-it d'offre spéciale plus rotation */
+    position: absolute; /* Positionné par rapport au bloc principal */
     top: -8px;
     left: 20px;
     background-color: var(--orange);
@@ -176,20 +175,20 @@ body {
     font-weight: bold;
     font-size: 12px;
     padding: 10px 18px 10px 14px;
-    z-index: 5;
-    letter-spacing: 0.5px;
+    z-index: 5; /* Assure que le post-it est au-dessus du bloc principal */
+    letter-spacing: 0.5px; 
     font-family: var(--police-principale);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: rotate(-3deg);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%); /* Forme de post-it avec coin replié */
     transition: transform 0.2s ease;
 }
 
 .postit-offre:hover {
-    transform: rotate(-2deg) scale(1.02);
+    transform: rotate(-2deg) scale(1.02); /* Légère rotation et augmentation de taille au survol */
 }
 
-.postit-offre::after {
+.postit-offre::after { /* Effet de coin replié plus ombre floue */
     content: "";
     position: absolute;
     bottom: -4px;
@@ -227,16 +226,16 @@ body {
     font-size: 14px;
     color: var(--gris-moyen);
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1.5; /* Améliore la lisibilité en augmentant l'espacement entre les lignes */
     text-align: center;
 }
 
 
 .btn-telecharger {
-    display: inline-block;
+    display: inline-block; /* Permet de centrer le texte et d'ajouter du padding */
     background-color: var(--orange);
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Supprime le soulignement */
     padding: 10px 24px;
     border-radius: 50px;
     font-size: 14px;
@@ -275,7 +274,7 @@ body {
 .pied-liens {
     display: flex;
     gap: 35px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permet aux liens de se réorganiser sur les petits écrans */
 }
 
 .colonne-liens a {
@@ -284,7 +283,7 @@ body {
     color: var(--gris-moyen);
     margin-bottom: 5px;
     font-size: 11px;
-    transition: color 0.2s;
+    transition: color 0.2s;/* Transition de couleur plus fluide au survol */
 }
 
 .colonne-liens a:hover {
@@ -297,7 +296,7 @@ body {
     flex-wrap: wrap;
 }
 
-.icone-reseau {
+.icone-reseau { /* Style pour les icônes  pied de page */
     display: flex;
     align-items: center;
     gap: 6px;
@@ -311,7 +310,7 @@ body {
     transition: all 0.2s;
 }
 
-.icone-reseau:hover {
+.icone-reseau:hover {/* Applique un filtre et change la couleur au survol */
     color: var(--orange);
     box-shadow: var(--ombre-appuyee);
     transform: scale(1.02);
@@ -324,7 +323,7 @@ body {
     transition: all 0.2s;
 }
 
-.icone-reseau:hover .svg-icon {
+.icone-reseau:hover .svg-icon {/* Applique un filtre et changerau survol */
     filter: brightness(0) saturate(100%) invert(59%) sepia(68%) saturate(483%) hue-rotate(334deg) brightness(98%) contrast(93%);
 }
 
@@ -335,7 +334,7 @@ body {
     color: var(--gris-moyen);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 700px) {/* Adapte pour les écrans moyens (tablettes) */
     body {
         padding: 12px;
     }
@@ -350,7 +349,7 @@ body {
         padding: 15px 18px 12px;
     }
     
-    .entete-interieur {
+    .entete-interieur {/* Adapte l'entête pour les écrans moyens */
         flex-direction: column;
     }
     
@@ -369,10 +368,10 @@ body {
         left: 10px;
         padding: 6px 12px 6px 10px;
         font-size: 10px;
-        transform: rotate(-2deg);
+        transform: rotate(-2deg); /* Légère rotation pour les écrans moyens */
     }
     
-    .bloc-principal {
+    .bloc-principal {/* Adapte le bloc principal pour les écrans moyens */
         padding: 25px 12px;
         max-width: 95%;
     }
@@ -390,7 +389,7 @@ body {
         font-size: 12px;
     }
     
-    .pied-interieur {
+    .pied-interieur {/* Adapte le pied de page pour les écrans moyens */
         flex-direction: column;
         text-align: center;
     }
@@ -406,7 +405,7 @@ body {
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 480px) {/* Adapte pour les très petits écrans (smartphones) */
     .logo a {
         font-size: 14px;
     }
@@ -454,7 +453,7 @@ body {
     }
 }
 
-html, body {
+html, body {/* Empêche le défilement horizontal sur les petits écrans et garantit que le contenu s'adapte à la largeur de l'écran */
     overflow-x: hidden;
     width: 100%;
 }

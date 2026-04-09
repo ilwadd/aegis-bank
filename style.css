@@ -1,17 +1,12 @@
 /* style.css - Styles pour la page d'accueil de la banque en ligne que j'ai pris  */
 :root {
-    --orange: #FF6B35;           /* Couleur principale orange */
-    --orange-fonce: #E55A2A;     /* Orange plus foncé pour les survols */
-    --gris-fonce: #1A1A1A;       /* Pour les titres */
-    --gris-moyen: #666666;       /* Pour les textes */
-    --gris-fond: #E8EAE9;        /* Fond de la page */
-    
-    
-    
+    --orange: #FF6B35;
+    --orange-fonce: #E55A2A;
+    --gris-fonce: #1A1A1A;
+    --gris-moyen: #666666;
+    --gris-fond: #E8EAE9;
     --police-principale: 'Inter', Arial, sans-serif;
     --police-titre: 'Inter', Arial, sans-serif;
-    
-    /* Ombres pour l'effet neumorphique */
     --ombre-legere: 
         -4px -4px 8px 0px rgba(255, 255, 255, 1),
         3px 3px 6px 0px rgba(13, 39, 80, 0.04);
@@ -22,16 +17,10 @@
         inset 3px 3px 5px 0px rgba(13, 39, 80, 0.05);
 }
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    overflow-x: hidden;
-    width: 100%;
 }
 
 body {
@@ -43,12 +32,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100vw;
-    position: relative;
 }
-
 
 .entete {
     background-color: var(--gris-fond);
@@ -68,7 +52,6 @@ body {
     gap: 10px;
 }
 
-
 .logo {
     display: flex;
     align-items: center;
@@ -87,7 +70,6 @@ body {
     color: var(--orange);
     text-decoration: none;
 }
-
 
 .menu ul {
     display: flex;
@@ -109,13 +91,11 @@ body {
     box-shadow: var(--ombre-appuyee);
 }
 
-
 .boutons-droite {
     display: flex;
     gap: 8px;
     align-items: center;
 }
-
 
 .btn-inscription {
     background-color: var(--orange);
@@ -133,7 +113,6 @@ body {
     transform: scale(1.02);
 }
 
-
 .btn-connexion {
     color: var(--orange);
     text-decoration: none;
@@ -150,14 +129,12 @@ body {
     box-shadow: var(--ombre-appuyee);
 }
 
-
 .contenu-principal {
     flex: 1;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-
 
 .bloc-principal {
     position: relative;
@@ -175,7 +152,6 @@ body {
     justify-content: center;
 }
 
-/* avec coin replié et rotation */
 .postit-offre {
     position: absolute;
     top: -8px;
@@ -192,7 +168,6 @@ body {
     transform: rotate(-3deg);
     clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%);
     transition: transform 0.2s ease;
-    max-width: 90%;
 }
 
 .postit-offre:hover {
@@ -221,7 +196,6 @@ body {
     text-align: center;
 }
 
-
 .titre-principal {
     font-size: 36px;
     font-weight: bold;
@@ -232,7 +206,6 @@ body {
     text-align: center;
 }
 
-
 .description {
     font-size: 14px;
     color: var(--gris-moyen);
@@ -240,7 +213,6 @@ body {
     line-height: 1.5;
     text-align: center;
 }
-
 
 .btn-telecharger {
     display: inline-block;
@@ -262,7 +234,6 @@ body {
     box-shadow: var(--ombre-appuyee);
 }
 
-
 .pied-page {
     background-color: var(--gris-fond);
     padding: 20px 25px 15px;
@@ -280,7 +251,6 @@ body {
     gap: 20px;
     padding-bottom: 15px;
 }
-
 
 .pied-liens {
     display: flex;
@@ -345,11 +315,9 @@ body {
     color: var(--gris-moyen);
 }
 
-/* CORRECTION IPHONE - SUPPRESSION SCROLL */
 @media (max-width: 700px) {
     body {
         padding: 12px;
-        overflow-x: hidden !important;
     }
     
     .entete {
@@ -382,9 +350,6 @@ body {
         padding: 6px 12px 6px 10px;
         font-size: 10px;
         transform: rotate(-2deg);
-        max-width: calc(100% - 20px);
-        white-space: nowrap;
-        overflow-x: hidden;
     }
     
     .bloc-principal {
@@ -420,7 +385,6 @@ body {
     }
 }
 
-
 @media (max-width: 480px) {
     .logo a {
         font-size: 14px;
@@ -448,7 +412,6 @@ body {
         padding: 5px 10px 5px 8px;
         font-size: 9px;
         transform: rotate(-1deg);
-        max-width: calc(100% - 16px);
     }
     
     .titre-principal {

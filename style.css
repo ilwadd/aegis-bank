@@ -1,12 +1,17 @@
 /* style.css - Styles pour la page d'accueil de la banque en ligne que j'ai pris  */
 :root {
-    --orange: #FF6B35;
-    --orange-fonce: #E55A2A;
-    --gris-fonce: #1A1A1A;
-    --gris-moyen: #666666;
-    --gris-fond: #E8EAE9;
+    --orange: #FF6B35;           /* Couleur principale orange */
+    --orange-fonce: #E55A2A;     /* Orange plus foncé pour les survols */
+    --gris-fonce: #1A1A1A;       /* Pour les titres */
+    --gris-moyen: #666666;       /* Pour les textes */
+    --gris-fond: #E8EAE9;        /* Fond de la page */
+    
+    
+    
     --police-principale: 'Inter', Arial, sans-serif;
     --police-titre: 'Inter', Arial, sans-serif;
+    
+    /* Ombres pour l'effet neumorphique */
     --ombre-legere: 
         -4px -4px 8px 0px rgba(255, 255, 255, 1),
         3px 3px 6px 0px rgba(13, 39, 80, 0.04);
@@ -17,10 +22,16 @@
         inset 3px 3px 5px 0px rgba(13, 39, 80, 0.05);
 }
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -33,6 +44,7 @@ body {
     align-items: center;
     padding: 20px;
 }
+
 
 .entete {
     background-color: var(--gris-fond);
@@ -52,6 +64,7 @@ body {
     gap: 10px;
 }
 
+
 .logo {
     display: flex;
     align-items: center;
@@ -70,6 +83,7 @@ body {
     color: var(--orange);
     text-decoration: none;
 }
+
 
 .menu ul {
     display: flex;
@@ -91,11 +105,13 @@ body {
     box-shadow: var(--ombre-appuyee);
 }
 
+
 .boutons-droite {
     display: flex;
     gap: 8px;
     align-items: center;
 }
+
 
 .btn-inscription {
     background-color: var(--orange);
@@ -113,6 +129,7 @@ body {
     transform: scale(1.02);
 }
 
+
 .btn-connexion {
     color: var(--orange);
     text-decoration: none;
@@ -129,12 +146,14 @@ body {
     box-shadow: var(--ombre-appuyee);
 }
 
+
 .contenu-principal {
     flex: 1;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 
 .bloc-principal {
     position: relative;
@@ -152,6 +171,7 @@ body {
     justify-content: center;
 }
 
+/* POST-IT STYLE PAPIER - avec coin replié et rotation */
 .postit-offre {
     position: absolute;
     top: -8px;
@@ -196,6 +216,7 @@ body {
     text-align: center;
 }
 
+
 .titre-principal {
     font-size: 36px;
     font-weight: bold;
@@ -206,6 +227,7 @@ body {
     text-align: center;
 }
 
+
 .description {
     font-size: 14px;
     color: var(--gris-moyen);
@@ -213,6 +235,7 @@ body {
     line-height: 1.5;
     text-align: center;
 }
+
 
 .btn-telecharger {
     display: inline-block;
@@ -234,6 +257,7 @@ body {
     box-shadow: var(--ombre-appuyee);
 }
 
+
 .pied-page {
     background-color: var(--gris-fond);
     padding: 20px 25px 15px;
@@ -251,6 +275,7 @@ body {
     gap: 20px;
     padding-bottom: 15px;
 }
+
 
 .pied-liens {
     display: flex;
@@ -315,89 +340,77 @@ body {
     color: var(--gris-moyen);
 }
 
+/* VERSION MOBILE AVEC LARGEURS RÉDUITES */
 @media (max-width: 700px) {
     body {
-        padding: 12px;
+        padding: 8px;
     }
     
     .entete {
-        width: 95%;
-        padding: 8px 15px;
+        width: 100%;
+        padding: 6px 12px;
     }
     
     .pied-page {
-        width: 95%;
-        padding: 15px 18px 12px;
+        width: 100%;
+        padding: 12px 15px 10px;
     }
     
     .entete-interieur {
         flex-direction: column;
+        gap: 8px;
     }
     
     .menu ul {
-        gap: 10px;
+        gap: 6px;
         flex-wrap: wrap;
         justify-content: center;
     }
     
     .menu a {
-        font-size: 11px;
+        font-size: 10px;
+        padding: 4px 6px;
     }
     
     .postit-offre {
         top: -5px;
-        left: 10px;
-        padding: 6px 12px 6px 10px;
-        font-size: 10px;
+        left: 5px;
+        padding: 4px 10px 4px 8px;
+        font-size: 9px;
         transform: rotate(-2deg);
     }
     
     .bloc-principal {
-        padding: 25px 12px;
-        max-width: 95%;
+        padding: 20px 10px;
+        width: 100%;
     }
     
     .titre-principal {
-        font-size: 26px;
+        font-size: 24px;
     }
     
     .description {
-        font-size: 12px;
+        font-size: 11px;
     }
     
     .btn-telecharger {
-        padding: 8px 20px;
-        font-size: 12px;
+        padding: 6px 16px;
+        font-size: 11px;
     }
     
     .pied-interieur {
         flex-direction: column;
         text-align: center;
+        gap: 12px;
     }
     
     .pied-liens {
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
     }
     
     .pied-reseaux {
         justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo a {
-        font-size: 14px;
-    }
-    
-    .icone-menu {
-        width: 18px;
-        height: 18px;
-    }
-    
-    .menu a {
-        font-size: 9px;
-        padding: 4px 6px;
     }
     
     .btn-inscription,
@@ -405,30 +418,46 @@ body {
         padding: 4px 10px;
         font-size: 10px;
     }
+}
+
+
+@media (max-width: 480px) {
+    .logo a {
+        font-size: 13px;
+    }
+    
+    .icone-menu {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .menu a {
+        font-size: 9px;
+        padding: 3px 5px;
+    }
     
     .postit-offre {
-        top: -3px;
-        left: 8px;
-        padding: 5px 10px 5px 8px;
-        font-size: 9px;
-        transform: rotate(-1deg);
+        top: -4px;
+        left: 4px;
+        padding: 3px 8px 3px 6px;
+        font-size: 8px;
     }
     
     .titre-principal {
-        font-size: 22px;
+        font-size: 20px;
     }
     
     .description {
-        font-size: 11px;
+        font-size: 10px;
     }
     
     .icone-reseau {
-        font-size: 10px;
-        padding: 3px 8px;
+        font-size: 9px;
+        padding: 3px 6px;
     }
     
     .svg-icon {
-        width: 14px;
-        height: 14px;
+        width: 12px;
+        height: 12px;
     }
 }

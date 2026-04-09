@@ -23,7 +23,7 @@
 }
 
 
-* {/* Réinitialisation de base */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -51,7 +51,7 @@ body {
     max-width: 900px;
 }
 
-.entete-interieur {/*  aligner les éléments */
+.entete-interieur {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,7 +60,19 @@ body {
 }
 
 
-.logo a {/* nom banque */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icone-menu {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.logo a {
     font-size: 18px;
     font-weight: bold;
     color: var(--orange);
@@ -76,21 +88,20 @@ body {
 
 .menu a {
     text-decoration: none;
-    color:black;
+    color: black;
     font-size: 13px;
     padding: 5px 8px;
     border-radius: 30px;
     transition: all 0.2s;
 }
 
-
-.menu a:hover { /* survol des differents liens */
+.menu a:hover {
     color: var(--orange);
     box-shadow: var(--ombre-appuyee);
 }
 
 
-.boutons-droite {/* les boutons à droite  */
+.boutons-droite {
     display: flex;
     gap: 8px;
     align-items: center;
@@ -126,25 +137,8 @@ body {
     transition: all 0.2s;
 }
 
-.btn-connexion:hover { /* effet d'appui changement */
+.btn-connexion:hover {
     box-shadow: var(--ombre-appuyee);
-}
-
-
-.btn-langue {
-    color:black;
-    text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 40px;
-    font-size: 12px;
-    background-color: var(--gris-fond);
-    box-shadow: var(--ombre-legere);
-    transition: all 0.2s;
-}
-
-.btn-langue:hover {
-    box-shadow: var(--ombre-appuyee); /* effet d'appui */
-    color: var(--orange);
 }
 
 
@@ -156,7 +150,8 @@ body {
 }
 
 
-.bloc-principal {/* grande case  */
+.bloc-principal {
+    position: relative;
     text-align: center;
     padding: 35px 15px;
     background-color: var(--gris-fond);
@@ -165,21 +160,66 @@ body {
     margin-bottom: 20px;
     width: 100%;
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* POST-IT STYLE PAPIER - avec coin replié et rotation */
+.postit-offre {
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    background-color: var(--orange);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 10px 18px 10px 14px;
+    z-index: 5;
+    letter-spacing: 0.5px;
+    font-family: var(--police-principale);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: rotate(-3deg);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%);
+    transition: transform 0.2s ease;
+}
+
+.postit-offre:hover {
+    transform: rotate(-2deg) scale(1.02);
+}
+
+.postit-offre::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    right: 4px;
+    width: 30%;
+    height: 8px;
+    background: rgba(0, 0, 0, 0.15);
+    filter: blur(3px);
+    z-index: -1;
 }
 
 .texte-principal {
     max-width: 600px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 
 .titre-principal {
     font-size: 36px;
     font-weight: bold;
-    color:black;
+    color: black;
     margin-bottom: 12px;
     line-height: 1.2;
     font-family: var(--police-titre);
+    text-align: center;
 }
 
 
@@ -188,6 +228,7 @@ body {
     color: var(--gris-moyen);
     margin-bottom: 20px;
     line-height: 1.5;
+    text-align: center;
 }
 
 
@@ -202,7 +243,7 @@ body {
     font-weight: bold;
     transition: all 0.2s;
     box-shadow: var(--ombre-legere);
-    margin-bottom: 15px;
+    text-align: center;
 }
 
 .btn-telecharger:hover {
@@ -212,30 +253,7 @@ body {
 }
 
 
-.offre {
-    font-size: 13px;
-    color: white;
-    font-weight: bold;
-    background-color: var(--orange);
-    display: inline-block;
-    padding: 10px 24px;
-    border-radius: 50px;
-    margin-top: 15px;
-    font-size: 14px;
-    transition: all 0.2s;/* effet d'appui */
-}
-
-.offre:hover {
-   
-
-    background-color: var(--orange-fonce);
-    transform: scale(1.02);/* effet d'appui */
-    box-shadow: var(--ombre-appuyee);
-}
-
-
-
-.pied-page {/* grande case grise */
+.pied-page {
     background-color: var(--gris-fond);
     padding: 20px 25px 15px;
     border-radius: 40px;
@@ -247,44 +265,20 @@ body {
 .pied-interieur {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     padding-bottom: 15px;
 }
 
 
-.pied-nom span {/* nom banque*/
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--orange);
-    display: block;
-    margin-bottom: 5px;
-}
-
-.pied-nom p {
-    font-size: 11px;
-    color: grey;
-}
-
-
-.pied-liens {/* les 4 colonnes de liens */
+.pied-liens {
     display: flex;
     gap: 35px;
     flex-wrap: wrap;
 }
 
-/* Style pour les titres des colonnes (Découvrir, Compte, Ressources) */
-.colonne-liens h2,
-.colonne-liens h3,
-.colonne-liens h4,
-.titre-colonne {
-    font-size: 11px;        /* Plus petit */
-    font-weight: bold;      /* En gras */
-    color: black;           /* Noir */
-    margin-bottom: 8px;
-}
-
-.colonne-liens a {/* les liens des colonnes */
+.colonne-liens a {
     display: block;
     text-decoration: none;
     color: var(--gris-moyen);
@@ -297,34 +291,42 @@ body {
     color: var(--orange);
 }
 
-/* Icônes des réseaux sociaux */
 .pied-reseaux {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 15px 0;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    margin-bottom: 15px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .icone-reseau {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     text-decoration: none;
     color: var(--gris-moyen);
-    font-size: 13px;
-    padding: 5px 12px;
+    font-size: 12px;
+    padding: 5px 10px;
     border-radius: 30px;
-    transition: all 0.2s;
     background-color: var(--gris-fond);
     box-shadow: var(--ombre-legere);
+    transition: all 0.2s;
 }
 
 .icone-reseau:hover {
     color: var(--orange);
     box-shadow: var(--ombre-appuyee);
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
+.svg-icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg);
+    transition: all 0.2s;
+}
+
+.icone-reseau:hover .svg-icon {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(68%) saturate(483%) hue-rotate(334deg) brightness(98%) contrast(93%);
+}
 
 .pied-copyright {
     text-align: center;
@@ -333,7 +335,7 @@ body {
     color: var(--gris-moyen);
 }
 
-@media (max-width: 700px) {/*  tablettes ou téléphones */
+@media (max-width: 700px) {
     body {
         padding: 12px;
     }
@@ -362,6 +364,14 @@ body {
         font-size: 11px;
     }
     
+    .postit-offre {
+        top: -5px;
+        left: 10px;
+        padding: 6px 12px 6px 10px;
+        font-size: 10px;
+        transform: rotate(-2deg);
+    }
+    
     .bloc-principal {
         padding: 25px 12px;
         max-width: 95%;
@@ -380,10 +390,6 @@ body {
         font-size: 12px;
     }
     
-    .offre {
-        font-size: 11px;
-    }
-    
     .pied-interieur {
         flex-direction: column;
         text-align: center;
@@ -394,29 +400,20 @@ body {
         gap: 20px;
     }
     
-    /* Style mobile pour les titres */
-    .colonne-liens h2,
-    .colonne-liens h3,
-    .colonne-liens h4,
-    .titre-colonne {
-        font-size: 10px;
-    }
-    
     .pied-reseaux {
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-    
-    .icone-reseau {
-        font-size: 11px;
-        padding: 4px 10px;
+        justify-content: center;
     }
 }
 
 
-@media (max-width: 480px) {/* petits téléphones */
+@media (max-width: 480px) {
     .logo a {
         font-size: 14px;
+    }
+    
+    .icone-menu {
+        width: 18px;
+        height: 18px;
     }
     
     .menu a {
@@ -425,10 +422,17 @@ body {
     }
     
     .btn-inscription,
-    .btn-connexion,
-    .btn-langue {
+    .btn-connexion {
         padding: 4px 10px;
         font-size: 10px;
+    }
+    
+    .postit-offre {
+        top: -3px;
+        left: 8px;
+        padding: 5px 10px 5px 8px;
+        font-size: 9px;
+        transform: rotate(-1deg);
     }
     
     .titre-principal {
@@ -439,24 +443,13 @@ body {
         font-size: 11px;
     }
     
-    .offre {
-        font-size: 10px;
-    }
-    
-    .pied-nom span {
-        font-size: 14px;
-    }
-    
     .icone-reseau {
         font-size: 10px;
         padding: 3px 8px;
     }
     
-    /* Très petit mobile pour les titres */
-    .colonne-liens h2,
-    .colonne-liens h3,
-    .colonne-liens h4,
-    .titre-colonne {
-        font-size: 9px;
+    .svg-icon {
+        width: 14px;
+        height: 14px;
     }
 }

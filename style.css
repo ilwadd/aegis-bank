@@ -16,7 +16,7 @@ body {
 
 /* Header */
 .header {
-    background: rgba(245, 248, 244, 0.62);
+    background: rgba(245, 248, 244, 0.62); /* Semi-transparent background */
     padding: 8px 20px;
     border-radius: 50px;
     width: 95%;
@@ -112,7 +112,7 @@ body {
     background: #E55A2A;
 }
 
-/* Main */
+
 .main {
     flex: 1;
     display: flex;
@@ -222,10 +222,14 @@ body {
 /* Responsive */
 @media (max-width: 700px) {
 
-    /* On masque la nav,les boutons seul le burger reste visible */
     .nav,
     .buttons {
         display: none;
+    }
+
+    body {
+        height: 100vh;
+        overflow: hidden;
     }
 
     .cardTitle {

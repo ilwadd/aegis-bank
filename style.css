@@ -1,57 +1,30 @@
-/* style.css - Styles pour la page d'accueil de la banque en ligne que j'ai pris  */
-:root {
-    --orange: #FF6B35;           /* Couleur principale orange */
-    --orange-fonce: #E55A2A;     /* Orange plus foncé pour les survols */
-    --gris-fonce: #1A1A1A;       /* Pour les titres */
-    --gris-moyen: #666666;       /* Pour les textes */
-    --gris-fond: #E8EAE9;        /* Fond de la page */
-    
-    
-    
-    --police-principale: 'Inter', Arial, sans-serif;
-    --police-titre: 'Inter', Arial, sans-serif;
-    
-    /* Ombres pour l'effet neumorphique */
-    --ombre-legere: 
-        -4px -4px 8px 0px rgba(255, 255, 255, 1),
-        3px 3px 6px 0px rgba(13, 39, 80, 0.04);
-    --ombre-appuyee: 
-        -4px -4px 8px 0px rgba(255, 255, 255, 1),
-        3px 3px 6px 0px rgba(13, 39, 80, 0.04),
-        inset -3px -3px 5px 0px rgba(255, 255, 255, 0.4),
-        inset 3px 3px 5px 0px rgba(13, 39, 80, 0.05);
-}
-
-
-* { /* Réinitialisation des margesp,paddings, et utilisation du box-sizing  */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: var(--police-principale);
-    background-color: var(--gris-fond);
-    color: grey;
-    min-height: 100vh;
+    background: white;
+    font-family: system-ui, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
     padding: 20px;
 }
 
-
-.entete {
-    background-color: var(--gris-fond);
+/* Header */
+.header {
+    background: rgba(245, 248, 244, 0.62);
     padding: 8px 20px;
     border-radius: 50px;
-    box-shadow: var(--ombre-legere);
-    margin-bottom: 20px;
-    width: 80%;
-    max-width: 900px;
+    width: 95%;
+    max-width: 1000px;
+    margin-bottom: 30px;
 }
 
-.entete-interieur {
+.headerInner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,405 +32,228 @@ body {
     gap: 10px;
 }
 
-
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
-.icone-menu {
-    width: 22px;
-    height: 22px;
-    display: block;
-}
-
-.logo a {
+.logoName {
     font-size: 18px;
     font-weight: bold;
-    color: var(--orange);
+    color: #FF6B35;
     text-decoration: none;
 }
 
-
-.menu ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-}
-
-.menu a {
-    text-decoration: none;
-    color: black;
-    font-size: 13px;
-    padding: 5px 8px;
-    border-radius: 30px;
-    transition: all 0.2s;
-}
-
-.menu a:hover {
-    color: var(--orange);
-    box-shadow: var(--ombre-appuyee);
-}
-
-
-.boutons-droite {
+/* Navigation */
+.nav {
     display: flex;
     gap: 8px;
-    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
-
-.btn-inscription {
-    background-color: var(--orange);
-    color: white;
-    text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 40px;
-    font-size: 12px;
-    font-weight: bold;
-    transition: all 0.2s;
-}
-
-.btn-inscription:hover {
-    background-color: var(--orange-fonce);
-    transform: scale(1.02); /* Légère augmentation de taille au survol */
-}
-
-
-.btn-connexion {
-    color: var(--orange);
-    text-decoration: none;
-    padding: 6px 14px;
-    border-radius: 40px;
-    font-size: 12px;
-    font-weight: bold;
-    background-color: var(--gris-fond);
-    box-shadow: var(--ombre-legere);
-    transition: all 0.2s;
-}
-
-.btn-connexion:hover {
-    box-shadow: var(--ombre-appuyee);
-}
-
-
-.contenu-principal {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-
-.bloc-principal {
-    position: relative;
-    text-align: center;
-    padding: 35px 15px;
-    background-color: var(--gris-fond);
-    border-radius: 40px;
-    box-shadow: var(--ombre-legere);
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.postit-offre {/* Style pour le post-it d'offre spéciale plus rotation */
-    position: absolute; /* Positionné par rapport au bloc principal */
-    top: -8px;
-    left: 20px;
-    background-color: var(--orange);
-    color: white;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 10px 18px 10px 14px;
-    z-index: 5; /* Assure que le post-it est au-dessus du bloc principal */
-    letter-spacing: 0.5px; 
-    font-family: var(--police-principale);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: rotate(-3deg);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 90% 100%, 0% 100%); /* Forme de post-it avec coin replié */
-    transition: transform 0.2s ease;
-}
-
-.postit-offre:hover {
-    transform: rotate(-2deg) scale(1.02); /* Légère rotation et augmentation de taille au survol */
-}
-
-.postit-offre::after { /* Effet de coin replié plus ombre floue */
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    right: 4px;
-    width: 30%;
-    height: 8px;
-    background: rgba(0, 0, 0, 0.15);
-    filter: blur(3px);
-    z-index: -1;
-}
-
-.texte-principal {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-
-.titre-principal {
-    font-size: 36px;
-    font-weight: bold;
+.navLink {
     color: black;
-    margin-bottom: 12px;
-    line-height: 1.2;
-    font-family: var(--police-titre);
-    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 5px 10px;
 }
 
-
-.description {
-    font-size: 14px;
-    color: var(--gris-moyen);
-    margin-bottom: 20px;
-    line-height: 1.5; /* Améliore la lisibilité en augmentant l'espacement entre les lignes */
-    text-align: center;
+.navLink:hover {
+    color: #FF6B35;
 }
 
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 8px;
+}
 
-.btn-telecharger {
-    display: inline-block; /* Permet de centrer le texte et d'ajouter du padding */
-    background-color: var(--orange);
+.btn {
+    text-decoration: none;
+    padding: 5px 14px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btnRegister {
+    background: #FF6B35;
     color: white;
-    text-decoration: none; /* Supprime le soulignement */
-    padding: 10px 24px;
+}
+
+.btnRegister:hover {
+    background: #E55A2A;
+}
+
+.btnLogin {
+    color: #FF6B35;
+    border: 1px solid #FF6B35;
+}
+
+.btnLogin:hover {
+    background: #FF6B35;
+    color: white;
+}
+
+.btnDownload {
+    display: inline-block;
+    background: #FF6B35;
+    color: white;
+    padding: 10px 28px;
     border-radius: 50px;
     font-size: 14px;
     font-weight: bold;
-    transition: all 0.2s;
-    box-shadow: var(--ombre-legere);
-    text-align: center;
 }
 
-.btn-telecharger:hover {
-    background-color: var(--orange-fonce);
-    transform: scale(1.02);
-    box-shadow: var(--ombre-appuyee);
+.btnDownload:hover {
+    background: #E55A2A;
 }
 
+/* Main */
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
-.pied-page {
-    background-color: var(--gris-fond);
-    padding: 20px 25px 15px;
+/* Card */
+.card {
+    background: rgba(245, 248, 244, 0.62);
+    padding: 45px 30px;
     border-radius: 40px;
-    box-shadow: var(--ombre-legere);
-    width: 80%;
-    max-width: 900px;
+    text-align: center;
+    max-width: 750px;
+    width: 95%;
+    position: relative;
+    margin-bottom: 30px;
 }
 
-.pied-interieur {
+.cardTag {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: #FF6B35;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transform: rotate(-3deg);
+}
+
+.cardTitle {
+    font-size: 32px;
+    color: black;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.cardDescription {
+    font-size: 14px;
+    color: grey;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer */
+.footer {
+    background: rgba(245, 248, 244, 0.62);
+    padding: 18px 25px;
+    border-radius: 40px;
+    width: 95%;
+    max-width: 1000px;
+}
+
+.footerInner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    padding-bottom: 15px;
-}
-
-
-.pied-liens {
-    display: flex;
-    gap: 35px;
-    flex-wrap: wrap; /* Permet aux liens de se réorganiser sur les petits écrans */
-}
-
-.colonne-liens a {
-    display: block;
-    text-decoration: none;
-    color: var(--gris-moyen);
-    margin-bottom: 5px;
-    font-size: 11px;
-    transition: color 0.2s;/* Transition de couleur plus fluide au survol */
-}
-
-.colonne-liens a:hover {
-    color: var(--orange);
-}
-
-.pied-reseaux {
-    display: flex;
     gap: 15px;
+    margin-bottom: 12px;
+}
+
+.footerLinks {
+    display: flex;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
-.icone-reseau { /* Style pour les icônes  pied de page */
-    display: flex;
-    align-items: center;
-    gap: 6px;
+.footerLink {
+    color: #666666;
     text-decoration: none;
-    color: var(--gris-moyen);
-    font-size: 12px;
+    font-size: 11px;
+}
+
+.footerLink:hover {
+    color: #FF6B35;
+}
+
+.footerSocial {
+    display: flex;
+    gap: 12px;
+}
+
+.footerSocialLink {
+    background: rgba(255, 255, 255, 0.5);
     padding: 5px 10px;
     border-radius: 30px;
-    background-color: var(--gris-fond);
-    box-shadow: var(--ombre-legere);
-    transition: all 0.2s;
+    display: flex;
+    align-items: center;
 }
 
-.icone-reseau:hover {/* Applique un filtre et change la couleur au survol */
-    color: var(--orange);
-    box-shadow: var(--ombre-appuyee);
-    transform: scale(1.02);
+.footerSocialLink:hover {
+    background: rgba(237, 233, 229, 0.8);
 }
 
-.svg-icon {
-    width: 18px;
-    height: 18px;
-    filter: brightness(0) saturate(100%) invert(40%) sepia(0%) saturate(0%) hue-rotate(0deg);
-    transition: all 0.2s;
-}
-
-.icone-reseau:hover .svg-icon {/* Applique un filtre et changerau survol */
-    filter: brightness(0) saturate(100%) invert(59%) sepia(68%) saturate(483%) hue-rotate(334deg) brightness(98%) contrast(93%);
-}
-
-.pied-copyright {
+.footerCopyright {
     text-align: center;
-    padding-top: 12px;
     font-size: 10px;
-    color: var(--gris-moyen);
+    color: grey;
+    padding-top: 10px;
 }
 
-@media (max-width: 700px) {/* Adapte pour les écrans moyens (tablettes) */
-    body {
-        padding: 12px;
+/* Responsive */
+@media (max-width: 700px) {
+
+    /* On masque la nav,les boutons seul le burger reste visible */
+    .nav,
+    .buttons {
+        display: none;
     }
-    
-    .entete {
-        width: 95%;
-        padding: 8px 15px;
-    }
-    
-    .pied-page {
-        width: 95%;
-        padding: 15px 18px 12px;
-    }
-    
-    .entete-interieur {/* Adapte l'entête pour les écrans moyens */
-        flex-direction: column;
-    }
-    
-    .menu ul {
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .menu a {
-        font-size: 11px;
-    }
-    
-    .postit-offre {
-        top: -5px;
-        left: 10px;
-        padding: 6px 12px 6px 10px;
-        font-size: 10px;
-        transform: rotate(-2deg); /* Légère rotation pour les écrans moyens */
-    }
-    
-    .bloc-principal {/* Adapte le bloc principal pour les écrans moyens */
-        padding: 25px 12px;
-        max-width: 95%;
-    }
-    
-    .titre-principal {
+
+    .cardTitle {
         font-size: 26px;
     }
-    
-    .description {
-        font-size: 12px;
-    }
-    
-    .btn-telecharger {
-        padding: 8px 20px;
-        font-size: 12px;
-    }
-    
-    .pied-interieur {/* Adapte le pied de page pour les écrans moyens */
+
+    .footerInner {
         flex-direction: column;
         text-align: center;
     }
-    
-    .pied-liens {
-        justify-content: center;
-        gap: 20px;
-    }
-    
-    .pied-reseaux {
-        justify-content: center;
+
+    .cardTag {
+        font-size: 10px;
+        padding: 5px 12px;
     }
 }
 
-
-@media (max-width: 480px) {/* Adapte pour les très petits écrans (smartphones) */
-    .logo a {
-        font-size: 14px;
-    }
-    
-    .icone-menu {
-        width: 18px;
-        height: 18px;
-    }
-    
-    .menu a {
-        font-size: 9px;
-        padding: 4px 6px;
-    }
-    
-    .btn-inscription,
-    .btn-connexion {
-        padding: 4px 10px;
-        font-size: 10px;
-    }
-    
-    .postit-offre {
-        top: -3px;
-        left: 8px;
-        padding: 5px 10px 5px 8px;
-        font-size: 9px;
-        transform: rotate(-1deg);
-    }
-    
-    .titre-principal {
+@media (max-width: 480px) {
+    .cardTitle {
         font-size: 22px;
     }
-    
-    .description {
-        font-size: 11px;
-    }
-    
-    .icone-reseau {
-        font-size: 10px;
-        padding: 3px 8px;
-    }
-    
-    .svg-icon {
-        width: 14px;
-        height: 14px;
-    }
-}
 
-html, body {/* Empêche le défilement horizontal sur les petits écrans et garantit que le contenu s'adapte à la largeur de l'écran */
-    overflow-x: hidden;
-    width: 100%;
-}
+    .cardDescription {
+        font-size: 12px;
+    }
 
-body {
-    overflow-x: hidden;
+    .btnDownload {
+        font-size: 12px;
+        padding: 8px 22px;
+    }
 }

@@ -14,9 +14,8 @@ body {
     padding: 20px;
 }
 
-/* Header */
 .header {
-    background: rgba(245, 248, 244, 0.62); /* Semi-transparent background */
+    background: rgba(245, 248, 244, 0.62); /* Semi-transparent background  que je choisis*/
     padding: 8px 20px;
     border-radius: 50px;
     width: 95%;
@@ -24,7 +23,7 @@ body {
     margin-bottom: 30px;
 }
 
-.headerInner {
+.headerInner { 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,8 +31,8 @@ body {
     gap: 10px;
 }
 
-/* Logo */
-.logo {
+
+.logo { /* nom de l'application */
     display: flex;
     align-items: center;
     gap: 8px;
@@ -46,8 +45,8 @@ body {
     text-decoration: none;
 }
 
-/* Navigation */
-.nav {
+
+.nav { /* navigation liens */
     display: flex;
     gap: 8px;
     list-style: none;
@@ -65,7 +64,7 @@ body {
     color: #FF6B35;
 }
 
-/* Buttons */
+
 .buttons {
     display: flex;
     gap: 8px;
@@ -120,21 +119,21 @@ body {
     width: 100%;
 }
 
-/* Card */
-.card {
+
+.card { /* carte principale */
     background: rgba(245, 248, 244, 0.62);
     padding: 45px 30px;
     border-radius: 40px;
     text-align: center;
     max-width: 750px;
     width: 95%;
-    position: relative;
+    position: relative; /* permet le positionnement absolu du tag */
     margin-bottom: 30px;
 }
 
 .cardTag {
-    position: absolute;
-    top: -12px;
+    position: absolute; /* positionnement absolu pour le tag */
+    top: -12px; /* positionné au-dessus de la carte */
     left: 20px;
     background: #FF6B35;
     color: white;
@@ -161,7 +160,7 @@ body {
     margin-right: auto;
 }
 
-/* Footer */
+
 .footer {
     background: rgba(245, 248, 244, 0.62);
     padding: 18px 25px;
@@ -186,7 +185,7 @@ body {
 }
 
 .footerLink {
-    color: #666666;
+    color: grey;
     text-decoration: none;
     font-size: 11px;
 }
@@ -219,15 +218,15 @@ body {
     padding-top: 10px;
 }
 
-/* Responsive */
+
 @media (max-width: 700px) {
 
-    .nav,
+    .nav, /* pour cacher les liens de navigation sur mobile */
     .buttons {
         display: none;
     }
 
-    body {
+    body { /* pour éviter le scroll*/
         height: 100vh;
         overflow: hidden;
     }
